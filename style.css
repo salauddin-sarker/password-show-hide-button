@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+.content{
+  display: flex;
+  height: 50px;
+  position: relative;
+  width: 280px;
+}
+.content .lock{
+  background: #48dbfb;
+  border: 1px solid #48dbfb;
+  border-radius: 3px 0 0 3px;
+  color: #fff;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+}
+.content .show-hide{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.content input{
+  border-radius: 3px;
+  border: 1px solid #48dbfb;
+  color: #37d7fb;
+  font-size: 16px;
+  height: 100%;
+  padding-right: 50px;
+  padding-left: 60px;
+  outline: none;
+  width: 100%;
+}
+input:focus{
+  box-shadow: 0 0 15px #82e6fc,
+              0 0 25px #b4f0fd,
+              0 0 35px #ffffff;
+}
+input::placeholder{
+  color:  #82e6fc;;
+}
+.show-hide i{
+  color: #48dbfb;
+  cursor: pointer;
+  display: none;
+  font-size: 19px;
+}
+input:valid ~ .show-hide i{
+  display: block;
+}
+.show-hide i.hide:before{
+  content: "\f070";
+}
